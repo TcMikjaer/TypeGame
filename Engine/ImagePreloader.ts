@@ -5,7 +5,7 @@ class ImagePreloader
     constructor(urls: string[], callback: Function)
     {
         urls.forEach((url) =>{
-            var image = document.createElement("img");
+            let image = document.createElement("img");
             image.onload = () => {
                 this.Images.push(image);
                 if (this.Images.length == urls.length)

@@ -25,14 +25,13 @@ class CanvasRender
 
     Render(gameObject: GameObject, X: number, Y: number)
     {
-        gameObject.circle.Render(this.Context, X, Y);
+        gameObject.RenderType.Render(this.Context, X, Y);
     }
 
     RenderScene(scene: Scene)
     {
         scene.GameObjects.forEach((gameObject) =>{
-            //Check if the gameObject is within the borders of the camera.
-            if (true)
+            if (true)//TODO: Check if the gameObject is within the borders of the camera.
             {
                 //Render the object according to it's position to the camera.
                 this.Render(gameObject, gameObject.Position.X - scene.Camera.Position.X, gameObject.Position.Y - scene.Camera.Position.Y);
@@ -74,7 +73,7 @@ interface IRigidBody2d
 
 class Rectangle implements IRendable
 {
-    constructor(private Width: number, private Height: number, private FillColor: Color | undefined = undefined, private StrokeColor: Color | undefined  = undefined){}
+    constructor(private Width: number, private Height: number, private FillColor: Color | undefined = undefined, private StrokeColor: Color | undefined = undefined){}
 
     Render(ctx: CanvasRenderingContext2D, X: number, Y: number): void
     {
@@ -90,13 +89,6 @@ class Rectangle implements IRendable
             ctx.strokeRect(X, Y, this.Width, this.Height);
         }
     }
-
-    
-    // CollisionWithRectangle(rectangle: Rectangle, position: Vector2): boolean
-    // {
-    //     if (rectangle.) false;
-    //     return true;
-    // }
 }
 
 class Circle implements IRendable
@@ -174,5 +166,7 @@ enum Color
     Red = "red",
     Black = "black",
     Blue = "blue",
-    LightBlue = "rgba(0,147,255,1.0)"
+    LightBlue = "rgba(0,147,255,1.0)",
+    White = "white",
+    Yellow = "yellow"
 }

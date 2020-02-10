@@ -1,13 +1,13 @@
 class CollisionDetector 
 {
-    constructor(private Scene: Scene){}
+    // constructor(private Scene: Scene){}
 
     GameObjectHitSceneBorder(gameObject: GameObject)
     {
-        if (gameObject.Position.X >= this.Scene.Width) { /*Hit the right border*/ }
-        if (gameObject.Position.X <= 0) { /*Hit the left border*/ }
-        if (gameObject.Position.Y >= this.Scene.Height) { /*Hit the bottom border*/ }
-        if (gameObject.Position.Y <= 0) { /*Hit the top border*/ }
+        // if (gameObject.Position.X >= this.Scene.Width) { /*Hit the right border*/ }
+        // if (gameObject.Position.X <= 0) { /*Hit the left border*/ }
+        // if (gameObject.Position.Y >= this.Scene.Height) { /*Hit the bottom border*/ }
+        // if (gameObject.Position.Y <= 0) { /*Hit the top border*/ }
     }
     
     CircleCollisionWithCircle(circle1: Circle, position1: Vector2, circle2: Circle, position2: Vector2): boolean

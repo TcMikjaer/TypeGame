@@ -3,10 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <title>TypeGame</title>
+    <link rel="stylesheet" type="text/css" href="CSS/Style.css">
+
     <!-- Utils -->
     <script src="Utilities/Math.js"></script>
     <script src="Utilities/Dictionary.js"></script>
-
+    
     <!-- Engine -->
     <script src="Engine/CanvasRender.js"></script>
     <script src="Engine/CollisionDetector.js"></script>
@@ -14,10 +16,16 @@
     <script src="Engine/ImagePreloader.js"></script>
     <script src="Engine/Scene.js"></script>
     <script src="Engine/Vector2.js"></script>
-    <script src="Game.js"></script>
+    <script src="Engine/Component.js"></script>
+    <script src="Engine/Camera.js"></script>
+    <script src="Engine/Init.js"></script>
 
     <!-- Game -->
-    <link rel="stylesheet" type="text/css" href="CSS/Style.css">
+    <script src="Game/Ball.js"></script>
+    <script src="Game/Wall.js"></script>
+    <script src="Game/MoveComponent.js"></script>
+    <script src="Game/Game.js"></script>
+    
 </head>
 <body>
     <Canvas id="MainCanvas"></Canvas>

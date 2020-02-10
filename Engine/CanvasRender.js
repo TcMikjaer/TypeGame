@@ -14,13 +14,13 @@ var CanvasRender = /** @class */ (function () {
         this.Context.fillRect(100, 100, 100, 100);
     };
     CanvasRender.prototype.Render = function (gameObject, X, Y) {
-        gameObject.circle.Render(this.Context, X, Y);
+        gameObject.RenderType.Render(this.Context, X, Y);
     };
     CanvasRender.prototype.RenderScene = function (scene) {
         var _this = this;
         scene.GameObjects.forEach(function (gameObject) {
-            //Check if the gameObject is within the borders of the camera.
-            if (true) {
+            if (true) //TODO: Check if the gameObject is within the borders of the camera.
+             {
                 //Render the object according to it's position to the camera.
                 _this.Render(gameObject, gameObject.Position.X - scene.Camera.Position.X, gameObject.Position.Y - scene.Camera.Position.Y);
             }
@@ -128,4 +128,6 @@ var Color;
     Color["Black"] = "black";
     Color["Blue"] = "blue";
     Color["LightBlue"] = "rgba(0,147,255,1.0)";
+    Color["White"] = "white";
+    Color["Yellow"] = "yellow";
 })(Color || (Color = {}));
