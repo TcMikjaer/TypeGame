@@ -7,7 +7,6 @@ class MoveComponent extends Component
 
     Update(): void
     {
-        console.log("yeeees?");
         this.Owner.Position = this.Owner.Position.Add(this.Velocity);
     }
 }

@@ -19,7 +19,6 @@ var MoveComponent = /** @class */ (function (_super) {
         return _this;
     }
     MoveComponent.prototype.Update = function () {
-        console.log("yeeees?");
         this.Owner.Position = this.Owner.Position.Add(this.Velocity);
     };
     return MoveComponent;
