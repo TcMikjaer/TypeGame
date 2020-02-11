@@ -11,7 +11,7 @@ class CanvasRender
         this.Canvas.width = width; //1710;
     }
     
-    ClearScene(scene: Scene)
+    public ClearScene(scene: Scene)
     {
         this.Context.fillStyle = "black";
         this.Context.fillRect(0 - scene.Camera.Position.X, 0 - scene.Camera.Position.Y, this.Canvas.width, this.Canvas.height);
@@ -23,12 +23,12 @@ class CanvasRender
         this.Context.fillRect(100, 100, 100, 100);
     }
 
-    Render(gameObject: GameObject, X: number, Y: number)
+    private Render(gameObject: GameObject, X: number, Y: number)
     {
         gameObject.RenderType.Render(this.Context, X, Y);
     }
 
-    RenderScene(scene: Scene)
+    public RenderScene(scene: Scene)
     {
         scene.GameObjects.forEach((gameObject) =>{
             if (true)//TODO: Check if the gameObject is within the borders of the camera.

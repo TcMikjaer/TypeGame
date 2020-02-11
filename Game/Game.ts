@@ -9,7 +9,7 @@ class Game
             new Circle(5, Color.LightBlue, Color.LightBlue),
             new Vector2(Math.floor(this.Scene1.Width / 2), Math.floor(this.Scene1.Height / 2)) //Center of scene.
         );
-        ball.AddComponent(new MoveComponent(ball, new Vector2(1, 1)));
+        ball.Add(new MoveComponent(ball, VectorFactory.CreateFromAngle(LinearInterpolation(Math.random(), 0, Math.PI * 2)))); //Random Direction
         this.Scene1.Add(ball);
 
         this.Scene1.Add(new Wall(
@@ -30,7 +30,7 @@ class Game
         ));
     }
 
-    Run = () =>
+    public Run = () =>
     {
         this.Scene1.Update();
         this.Render.ClearScene(this.Scene1);

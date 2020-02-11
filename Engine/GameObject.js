@@ -9,7 +9,7 @@ var GameObject = /** @class */ (function () {
             component.Update();
         });
     };
-    GameObject.prototype.AddComponent = function (component) {
+    GameObject.prototype.Add = function (component) {
         this.Components.push(component);
     };
     return GameObject;

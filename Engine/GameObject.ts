@@ -12,7 +12,7 @@ class GameObject
         });
     }
 
-    AddComponent(component: IComponent)
+    Add(component: IComponent)
     {
         this.Components.push(component);
     }
