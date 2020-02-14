@@ -10,6 +10,7 @@ class Game
             new Vector2(Math.floor(this.Scene1.Width / 2), Math.floor(this.Scene1.Height / 2)) //Center of scene.
         );
         ball.Add(new MoveComponent(ball, VectorFactory.CreateFromAngle(LinearInterpolation(Math.random(), 0, Math.PI * 2)))); //Random Direction
+        ball.Add(new BounceWhenHitComponent(ball));
         this.Scene1.Add(ball);
 
         this.Scene1.Add(new Wall(
